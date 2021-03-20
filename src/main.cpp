@@ -167,7 +167,8 @@ void configureWifi()
   {
     Serial.println("");
     Serial.println("WiFi connected at IP address:");
-    Serial.println(WiFi.localIP());
+    String localIP = WiFi.localIP().toString();
+    Serial.println(localIP);
 
     File config = LittleFS.open("/config.json", "w");
 
@@ -176,8 +177,6 @@ void configureWifi()
     config.close();
 
     connectionStatus(GREEN_PIN);
-
-    server.send(200, "application/json", "{\"success\": true}");
   }
 }
 
