@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <title>Led App</title>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root">
+    <h5 class="mdc-typography--headline5">Welcome</h5>
+    <a class="mdc-button mdc-button--raised" href="/setup" style="margin-bottom: 16px">
+      <span class="mdc-button__label">Setup</span>
+    </a>
+    <div>
+      <span class="mdc-typography--body1">LED status: </span>
+      <span class="mdc-typography--body1" id="ledStatus"></span>
+    </div>
+    <button class="mdc-button mdc-button--raised" id="ledBtn">
+      <span class="mdc-button__label">Toggle</span>
+    </button>
+  </div>
+  <script src="/js/main.js"></script>
+</body>
+
+</html>
